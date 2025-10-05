@@ -27,11 +27,11 @@ Puedes encontrar una breve explicación del funcionamiento del proyecto en el si
 ### Clona el repositorio con SSH
 
 ```
-git clone git@gitlab.com:cesar-sebastian/back-dependencies.git
+git@github.com:cesarsebastiandev/back-dependencies.git
 ```
 ### O Clona el repositorio con HTTPS
 ```
-git clone https://gitlab.com/cesar-sebastian/back-dependencies.git
+https://github.com/cesarsebastiandev/back-dependencies.git
 ```
 ### Ubicarse en la carpeta del proyecto
 ```
