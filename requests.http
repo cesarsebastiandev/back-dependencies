@@ -1,0 +1,34 @@
+### Ping to server
+GET http://localhost:8080
+
+### Create new dependency
+POST http://localhost:8080/api/v1/dependencies
+Content-Type: application/json
+
+{
+  "name": "Dependency Two",
+  "address": "Independence Avenue #34",
+  "email": "dependency_one@gmail.com",
+  "telephone": "1234567890"
+}
+### Fetch all dependencies without pagination
+GET http://localhost:8080/api/v1/dependencies
+
+### Fetch dependencies with pagination
+GET http://localhost:8080/api/v1/dependencies/pagination
+
+### Fetch a dependency by id
+GET http://localhost:8080/api/v1/dependencies/1
+
+### Edit a dependency by id
+PUT http://localhost:8080/api/v1/dependencies/2
+Content-Type: application/json
+
+{
+  "name": "Dependency one edited",
+  "address": "Miguel Hidalgo Avenue #150",
+  "email": "nuevo@email.com",
+  "telephone": "0987654321"
+}
+### Update dependency status by id
+PATCH http://localhost:8080/api/v1/dependencies/1/status?isActive=false

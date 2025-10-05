@@ -1,0 +1,24 @@
+services:
+  db:
+    container_name: container-dependencies
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: sebastian
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db-dependencies
+      PGDATA: /data/postgres
+    volumes:
+      - db:/data/postgres
+    ports:
+      - "5333:5432"
+    networks:
+      - db
+    restart: unless-stopped
+
+networks:
+  db:
+    driver: bridge
+
+volumes:
+  db:
+
