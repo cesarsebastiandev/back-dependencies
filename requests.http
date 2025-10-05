@@ -7,6 +7,7 @@ Content-Type: application/json
 
 {
   "name": "Dependency Two",
+  "sigla": "DETTRE",
   "address": "Independence Avenue #34",
   "email": "dependency_one@gmail.com",
   "telephone": "1234567890"

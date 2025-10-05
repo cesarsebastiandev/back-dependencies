@@ -9,6 +9,11 @@ public class DependencyRequest {
     @Size(max = 150, message = "Maximum 150 characters")
     private String name;
 
+    @NotBlank(message = "Sigla is required.")
+    @Size(min = 3, message = "Must be at least 3 characters")
+    @Size(max = 40, message = "Maximum 40 characters")
+    private String sigla;
+
     @NotBlank(message = "Address is required.")
     @Size(min = 3, message = "Must be at least 3 characters")
     @Size(max = 250, message = "Maximum 250 characters")
@@ -30,6 +35,15 @@ public class DependencyRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
     }
 
     public String getAddress() {

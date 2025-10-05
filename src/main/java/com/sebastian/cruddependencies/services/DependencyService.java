@@ -45,6 +45,7 @@ public class DependencyService {
         existing.setAddress(request.getAddress());
         existing.setEmail(request.getEmail());
         existing.setTelephone(request.getTelephone());
+        existing.setSigla(request.getSigla());
 
         return dependencyRepository.save(existing);
     }

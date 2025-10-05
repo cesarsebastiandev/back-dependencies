@@ -17,6 +17,7 @@ public class Dependency {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String sigla;
     private String address;
     private String email;
     private String telephone;
@@ -36,9 +37,10 @@ public class Dependency {
     public Dependency() {
     }
 
-    public Dependency(Integer id, String name, String address, String email, String telephone, boolean is_active, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Dependency(Integer id, String name, String sigla, String address, String email, String telephone, boolean is_active, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.name = name;
+        this.sigla = sigla;
         this.address = address;
         this.email = email;
         this.telephone = telephone;
@@ -47,8 +49,9 @@ public class Dependency {
         this.updatedAt = updatedAt;
     }
 
-    public Dependency(String name, String address, String email, String telephone) {
+    public Dependency(String name, String address, String email, String telephone, String sigla) {
         this.name = name;
+        this.sigla = sigla;
         this.address = address;
         this.email = email;
         this.telephone = telephone;
@@ -119,15 +122,23 @@ public class Dependency {
         this.updatedAt = updatedAt;
     }
 
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Dependency that = (Dependency) o;
-        return is_active == that.is_active && Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(address, that.address) && Objects.equals(email, that.email) && Objects.equals(telephone, that.telephone) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
+        return is_active == that.is_active && Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(sigla, that.sigla) && Objects.equals(address, that.address) && Objects.equals(email, that.email) && Objects.equals(telephone, that.telephone) && Objects.equals(createdAt, that.createdAt) && Objects.equals(updatedAt, that.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, address, email, telephone, is_active, createdAt, updatedAt);
+        return Objects.hash(id, name, sigla, address, email, telephone, is_active, createdAt, updatedAt);
     }
 }
