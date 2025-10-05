@@ -1,10 +1,10 @@
-# 🧾 API de Dependencias - Spring Boot
+# API de Dependencias - Spring Boot
 
 RESTAPI desarrollada en Java 21 con Spring Boot 3.5.6 que expone los endpoints de un crud de dependencias. La base de datos PostgreSQL corre en un contenedor de Docker.
 
 ---
 
-## 🚀 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - Java 21
 - Spring Boot 3.5.6
@@ -15,14 +15,14 @@ RESTAPI desarrollada en Java 21 con Spring Boot 3.5.6 que expone los endpoints d
 - Docker + Docker Compose
 
 ---
-## 🎥 Video demostrativo
+## Video demostrativo
 
 Puedes encontrar una breve explicación del funcionamiento del proyecto en el siguiente video:
 
 [Ver video aqui](https://drive.google.com/file/d/1Qlr3WQ9giRVKr-5C-GcqmmHXwpEW4_Nu/view?usp=sharing)
 ---
 
-## ⚙️ Configuración del Proyecto
+## Configuración del Proyecto
 ### Abre una terminal
 ### Clona el repositorio con SSH
 
@@ -53,7 +53,7 @@ docker ps
 ```
 docker stop container-dependencies
 ```
-### ⚠️ NOTA IMPORTANTE, LEER:
+### NOTA IMPORTANTE, LEER:
 ### Si no usas docker y tienes pgAdmin instalado en tu maquina, debes crear manualmente una base de datos con el nombre:
 ```
 db-dependencies
