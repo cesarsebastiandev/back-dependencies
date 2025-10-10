@@ -12,7 +12,7 @@ public class DependencyRequest {
     @NotBlank(message = "Sigla is required.")
     @Size(min = 3, message = "Must be at least 3 characters")
     @Size(max = 40, message = "Maximum 40 characters")
-    private String sigla;
+    private String acronym;
 
     @NotBlank(message = "Address is required.")
     @Size(min = 3, message = "Must be at least 3 characters")
@@ -20,7 +20,7 @@ public class DependencyRequest {
     private String address;
 
     @jakarta.validation.constraints.Email(message = "Invalid email format.")
-    @Size(max = 100, message = "Maximum 150 characters")
+    @Size(max = 100, message = "Maximum 100 characters")
     @NotBlank(message = "Email is required.")
     private String email;
 
@@ -38,12 +38,12 @@ public class DependencyRequest {
     }
 
 
-    public String getSigla() {
-        return sigla;
+    public String getAcronym() {
+        return acronym;
     }
 
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
+    public void setAcronym(String acronym) {
+        this.acronym = acronym;
     }
 
     public String getAddress() {

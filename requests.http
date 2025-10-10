@@ -7,10 +7,10 @@ Content-Type: application/json
 
 {
   "name": "Dependency Two",
-  "sigla": "DETTRE",
+  "acronym": "DETTRE",
   "address": "Independence Avenue #34",
   "email": "dependency_one@gmail.com",
-  "telephone": "1234567890"
+  "telephone": "1234567898"
 }
 ### Fetch all dependencies without pagination
 GET http://localhost:8080/api/v1/dependencies
@@ -22,14 +22,15 @@ GET http://localhost:8080/api/v1/dependencies/pagination
 GET http://localhost:8080/api/v1/dependencies/1
 
 ### Edit a dependency by id
-PUT http://localhost:8080/api/v1/dependencies/2
+PUT http://localhost:8080/api/v1/dependencies/1
 Content-Type: application/json
 
 {
   "name": "Dependency one edited",
   "address": "Miguel Hidalgo Avenue #150",
   "email": "nuevo@email.com",
-  "telephone": "0987654321"
+  "telephone": "0987654321",
+  "acronym": "ERCSQ"
 }
 ### Update dependency status by id
 PATCH http://localhost:8080/api/v1/dependencies/1/status?isActive=false

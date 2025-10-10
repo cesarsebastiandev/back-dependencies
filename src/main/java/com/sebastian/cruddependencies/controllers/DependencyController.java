@@ -50,7 +50,7 @@ public class DependencyController {
     @Operation(summary = "Create a new dependency", description = "Add a new software dependency to the system.")
     @PostMapping
     public ResponseEntity<Map<String, Object>> addNewDependency(@Valid @RequestBody DependencyRequest dependencyRequest) {
-        Dependency dependency = new Dependency(dependencyRequest.getName(), dependencyRequest.getAddress(), dependencyRequest.getEmail(), dependencyRequest.getTelephone(),dependencyRequest.getSigla());
+        Dependency dependency = new Dependency(dependencyRequest.getName(), dependencyRequest.getAddress(), dependencyRequest.getEmail(), dependencyRequest.getTelephone(),dependencyRequest.getAcronym());
         Dependency saved = dependencyService.insertDependency(dependency);
 
         Map<String, Object> response = new HashMap<>();
